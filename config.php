@@ -1,16 +1,23 @@
 <?php 
-        /*
-           Attention ! le host => l'adresse de la base de données et non du site !!
-        
-           Pour ceux qui doivent spécifier le port ex : 
-           $bdd = new PDO("mysql:host=CHANGER_HOST_ICI;dbname=CHANGER_DB_NAME;charset=utf8;port=3306", "CHANGER_LOGIN", "CHANGER_PASS");
-           
-         */
-    try 
-    {
-        $bdd = new PDO("mysql:host=localhost;dbname=user;charset=utf8", "login", "Noraga.971");
+
+    // start la session PHP
+    if(session_status() == PHP_SESSION_NONE){
+        session_start();
     }
-    catch(PDOException $e)
-    {
-        die('Erreur : '.$e->getMessage());
+
+    // déclaration des identifiants BDD
+    $db_host = "APPCODE HOST HERE";
+    $db_user = "AppCode";
+    $db_name = "AppCode";
+    $db_password = "PASSWORD";
+
+    // connexion à la BDD
+    try {
+        $db = new PDO("mysql:host=" . $db_host . ";dbname=" . $db_name, $db_user, $db_password);
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch(PDOException $e) {
+        // en cas d'erreur
+        echo $e;
     }
+
+?>
