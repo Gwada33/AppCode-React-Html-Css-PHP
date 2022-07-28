@@ -1,6 +1,6 @@
 <?php 
-    session_start(); // Démarrage de la session
-    require_once 'config.php'; // On inclut la connexion à la base de données
+    $base = $_SERVER['DOCUMENT_ROOT'];
+    require $base.'/config.php'; // On inclut la connexion à la base de données
 
     if(!empty($_POST['email']) && !empty($_POST['password'])) // Si il existe les champs email, password et qu'il sont pas vident
     {

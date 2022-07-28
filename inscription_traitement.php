@@ -1,5 +1,6 @@
 <?php 
-    require_once 'config.php'; // On inclu la connexion à la bdd
+    $base = $_SERVER['DOCUMENT_ROOT'];
+    require $base.'/config.php'; // On inclut la connexion à la base de données
 
     // Si les variables existent et qu'elles ne sont pas vides
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']))
