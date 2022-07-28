@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bleufoncé: #284b63;
+    --blanc: #ffffff;
+    --gris: #d9d9d9;
+    --bleu-clair: #3c6e71;
+    --gris-foncé: #353535;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background: var(--gris);
+    min-height: 200vh;
+}
+
+.hero-section{
+    width: 100%;
+    height: 10%;
+    overflow: visible;
+    color: #ffffff;
+    background-image: url('images/Capture d’écran 2022-07-24 à 02.01.52.png');
+}
+
+.hero-section .hero-background{
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    height: 50%;
+    filter: blur(3px);
+    position: absolute;
+}
+
+.hero-section .hero-text, h1, h2{
+    width: 100%;
+    height: 100%;
+    margin: 0 30px -60px ;
+    font-size: 60px;
+}
+
+
+
+.hero-section .hero-text h1{
+    z-index: 1;
+    font-size: 100px;
+    background: -webkit-linear-gradient(90deg, var(--bleu-clair), var(--bleufoncé));
+    -webkit-background-clip: text;
+    filter: brightness(200%);
+    text-shadow: 0 0 20px var(--bleu-clair);
+    -webkit-text-fill-color: transparent;
+    
+}
+
+
+
+
+
+
+/*scrollbar*/
+body::-webkit-scrollbar{
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--bleu-clair);
+    border-radius: 25px;
+    animation: animatehue 10s linear infinite;
+}
+
+
+
