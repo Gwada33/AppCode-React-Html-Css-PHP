@@ -1,0 +1,6 @@
+# database connection
+config.php
+node_modules/
+
+# VSCODE de le_gabi
+.vscode/
